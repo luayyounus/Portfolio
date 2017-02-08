@@ -1,6 +1,6 @@
 'use strict';
 
-function ProjectConstructor(title,dateCreated,dateFinished) {
+function ProjectConstructor(title,desktop,tablet,mobile,dateCreated,dateFinished) {
   this.title = title;
   this.desktop = desktop;
   this.tablet = tablet;
