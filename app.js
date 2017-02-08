@@ -1,6 +1,10 @@
 'use strict';
 
-function ProjectConstructor(name,link) {
-  this.name = name;
-  this.link = link;
+function ProjectConstructor(title,dateCreated,dateFinished) {
+  this.title = title;
+  this.desktop = desktop;
+  this.tablet = tablet;
+  this.mobile = mobile;
+  this.dateCreated = dateCreated;
+  this.dateFinished = dateFinished;
 }
