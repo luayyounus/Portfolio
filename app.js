@@ -1,10 +1,10 @@
 'use strict';
 
-function ProjectConstructor(title,desktop,tablet,mobile,dateCreated,dateFinished) {
-  this.title = title;
-  this.desktop = desktop;
-  this.tablet = tablet;
-  this.mobile = mobile;
-  this.dateCreated = dateCreated;
-  this.dateFinished = dateFinished;
+function ProjectConstructor(content) {
+  this.title = content.title;
+  this.desktop = content.desktop;
+  this.tablet = content.ablet;
+  this.mobile = content.mobile;
+  this.dateCreated = content.dateCreated;
+  this.dateFinished = content.dateFinished;
 }

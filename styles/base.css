@@ -33,7 +33,7 @@ address {
 
 a, a:link, a:active {
   text-decoration: none;
-  color: #777;
+  color: black;
 }
 
 a:hover, a:focus {
