@@ -1,9 +1,59 @@
 .site-header {
-  background: #FFEAAA;
-  min-height: 30%;
+  min-height: 40%;
+  max-width: 100%;
 }
 
-/* REVIEW: Float the main header to the left, to make room for the hamburger menu. */
+.header-section {
+  display: inline;
+  max-width: 100%;
+}
+.logo-icon{
+  max-width: 5%;
+  margin: 2%;
+  float: left;
+}
+
+.logo-sub {
+  margin-left: 2%;
+  radius: 4px;
+}
+
+.main-nav {
+  display: inline;
+  min-width: 90%;
+  max-width: 90%;
+  padding: 1em;
+}
+
+.main-nav ul {
+  padding: 0;
+  list-style: none;
+  clear: both;
+  margin: none;
+  padding: 2%;
+  display: inline;
+}
+
+.social-media {
+  padding: 0;
+  margin-left: 10%;
+}
+
+/*.main-nav:hover ul {
+  display: block;
+}*/
+
+.main-nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+}
+
+.opening-line {
+  font-family: fantasy;
+  text-align: center;
+}
+
 .heading-group-h1 {
   float: left;
   padding: 0 0 .2em 1em;
@@ -35,27 +85,7 @@ footer {
   margin-top: 3%;
 
 }
-.main-nav {
-  padding: 0.1em;
-}
 
-.main-nav ul {
-  padding: 0;
-  list-style: none;
-  clear: both;
-  margin: none;
-  padding: none;
-}
-
-.main-nav:hover ul {
-  display: block;
-}
-
-.main-nav li {
-  margin-right: .4em;
-  font-size: 1.5em;
-  padding: .5em .2em;
-}
 
 #filters {
   padding: 0;
@@ -85,7 +115,7 @@ footer {
    }
    .main-nav li {
      display: inline-block;
-     margin-left: 5%;
+     margin-left: 1%;
      font-size: 120%;
    }
    #about h1 {
@@ -112,10 +142,3 @@ footer {
      font-size: 100%;
    }
  }
-
-
-
- /*TODO: Now add styles for how things should look on a larger screen:
-         - Hide the hamburger.
-         - Main should be all on one row, with padding spaced better for a larger screen.
-         - Just, ya know, try to make it look good! */
