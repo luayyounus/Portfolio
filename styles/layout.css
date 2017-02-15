@@ -5,9 +5,6 @@
 .pull-right {
   float: right;
 }
-.rotate-right {
-  transform: rotate(45deg);
-}
 
 .clearfix::after {
   content: "";

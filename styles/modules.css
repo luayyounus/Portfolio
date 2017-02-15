@@ -48,7 +48,7 @@
   font-size: 250%;
 }
 
-.opening-line {
+#opening-line {
   font-family: fantasy;
   text-align: center;
 }
@@ -88,7 +88,7 @@ footer {
     .social-media-nav ul {
       display: none;
     }
-    .opening-line {
+    #opening-line {
       font-size: 80%;
     }
     footer {

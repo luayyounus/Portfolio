@@ -1,6 +1,6 @@
 'use strict';
 
-//Constructor function
+// Constructor function
 function Project (content) {
   this.image = content.image;
   this.title = content.title;
@@ -11,11 +11,23 @@ function Project (content) {
   this.dateFinished = content.dateFinished;
 }
 
+//toHtml method
+Project.prototype.toHtml = function() {
+
+}
+
+
+
 // Show/Hide hamburger list when clicked
-$('.icon-menu').on('click',function(){
-  $('.main-nav').slideToggle('slow',function(){
-    console.log('works@!!!');
-    $('.icon-menu').setAttribute('.rotate-right');
-    $('.main-nav.li').show();
-  })
-});
+
+// $('.logo-icon').animate({
+//   rotate: '40deg'
+// },0);
+// console.log('hiii');
+// $('.site-header').on('click',function(){
+//
+// });
+// 'slow',function(){
+//   console.log('works@!!!');
+//   $('.icon-menu').setAttribute('.rotate-right');
+//   $('.main-nav.li').show();
