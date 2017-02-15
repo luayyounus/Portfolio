@@ -1,5 +1,6 @@
 'use strict';
 
+//Constructor function
 function Project (content) {
   this.image = content.image;
   this.title = content.title;
@@ -9,3 +10,12 @@ function Project (content) {
   this.dateCreated = content.dateCreated;
   this.dateFinished = content.dateFinished;
 }
+
+// Show/Hide hamburger list when clicked
+$('.icon-menu').on('click',function(){
+  $('.main-nav').slideToggle('slow',function(){
+    console.log('works@!!!');
+    $('.icon-menu').setAttribute('.rotate-right');
+    $('.main-nav.li').show();
+  })
+});
