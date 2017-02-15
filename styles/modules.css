@@ -1,20 +1,56 @@
 .site-header {
-  background: #FFEAAA;
-  min-height: 30%;
+  /*display: inline;*/
+  min-width: 100%;
+  min-height: 20%;
 }
 
-/* REVIEW: Float the main header to the left, to make room for the hamburger menu. */
-.heading-group-h1 {
+.logo-icon {
   float: left;
-  padding: 0 0 .2em 1em;
-}
-.heading-group-h1 h2{
-  font-family: "Comic Sans MS";
-  font-style: italic;
+  max-width: 5%;
+  padding: 1%;
 }
 
-#about {
-  padding: 3%;
+/*.logo-sub {
+  margin-left: 2%;
+  radius: 4px;
+}*/
+
+.main-nav, .social-media-nav {
+  display: inline-block;
+  /*margin-left: 2%;*/
+  line-height: 2;
+
+}
+.main-nav li, .social-media-nav li {
+  list-style: none;
+  display: inline-block;
+  max-height: 40%;
+  font-size: 150%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.tab a {
+  font-size: 90%;
+}
+.main-nav {
+  float: left;
+  margin-left: 10px;
+}
+
+.main-nav:hover li {
+  display: block;
+}
+
+.social-media-nav {
+  float: right;
+}
+.icon-menu {
+  font-size: 250%;
+}
+
+.opening-line {
+  font-family: fantasy;
+  text-align: center;
 }
 
 
@@ -23,99 +59,39 @@ footer {
   background-color: black;
   color: white;
 }
-/*.heading-group-h1 h2 {
-  font-size: 100%;
-}*/
-
-/* TODO: Add styles for the icon-menu class. It should be bigger, and off to the right. */
-.icon-menu {
-  float:right;
-  font-size: 2em;
-  margin-right: 3%;
-  margin-top: 3%;
-
-}
-.main-nav {
-  padding: 0.1em;
-}
-
-.main-nav ul {
-  padding: 0;
-  list-style: none;
-  clear: both;
-  margin: none;
-  padding: none;
-}
-
-.main-nav:hover ul {
-  display: block;
-}
-
-.main-nav li {
-  margin-right: .4em;
-  font-size: 1.5em;
-  padding: .5em .2em;
-}
-
-#filters {
-  padding: 0;
-  list-style: none;
-}
 
 .template {
   display: none;
 }
 
-.byline {
-  color: #777;
-}
+ @media only screen and (min-width: 415px){
+    .icon-menu {
+      display: none;
+    }
+  }
 
-.byline a {
-  font-weight: bold;
-  text-decoration: none;
-}
+  @media only screen and (max-width: 414px) {
+    .logo-icon {
+      max-width: 18%;
+    }
 
-@media only screen and (min-width: 511px){
-   .icon-menu {
-     display: none;
-   }
-   .main-nav ul{
-     margin: none;
-     padding: none;
-   }
-   .main-nav li {
-     display: inline-block;
-     margin-left: 5%;
-     font-size: 120%;
-   }
-   #about h1 {
-     font-size: 150%;
-   }
- }
+    .main-nav li {
+      display: none;
+      margin: none;
+      padding: none;
+      border-bottom: 1px solid #ccc;
+      font-size: 120%;
+      /*float: left;*/
+      /*list-style: none;*/
+    }
 
- @media only screen and (max-width: 510px) {
-   .heading-group-h1 h2 {
-     font-size: 100%;
-   }
-   .main-nav ul {
-     display: none;
-     margin: none;
-     padding: none;
-   }
-   .main-nav li {
-     border-bottom: 1px solid #ccc;
-     font-size: 120%;
-     margin-left: 2%;
-     margin-right: 2%;
-   }
-   #about h1 {
-     font-size: 100%;
-   }
- }
-
-
-
- /*TODO: Now add styles for how things should look on a larger screen:
-         - Hide the hamburger.
-         - Main should be all on one row, with padding spaced better for a larger screen.
-         - Just, ya know, try to make it look good! */
+    .social-media-nav ul {
+      display: none;
+    }
+    .opening-line {
+      font-size: 80%;
+    }
+    footer {
+      font-size: 80%;
+    }
+  }

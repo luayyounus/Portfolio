@@ -2,60 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blog</title>
+  <title>Luay Younus - Web Developer</title>
   <link rel="stylesheet" href="vendor/styles/normalize.css">
   <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
-  <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+  <!-- favicon -->
+  <link rel="icon" type="image/icon" href="https://">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
   <header class="site-header clearfix">
-    <section class="heading-group-h1">
-      <h1>
-        Kilovolt Blog!
-      </h1>
-      <h2>The shocking power of static pages</h2>
-    </section>
-    <nav class="main-nav">
-      <ul>
-        <li class="tab" data-content="articles"><a href="#" class="icon-home">Home</a></li>
-        <li><a href="https://twitter.com/luayyounus" target="_blank" class="icon-twitter3"></a></li>
-        <li><a href="https://github.com/luayghazwan" target="_blank" class="icon-github"></a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="articles" class="tab-content">
-      <article class="template template" data-category="cat">
-        <header>
-          <h1>Title</h1>
-          <div class="byline">
-            By <address><a href="">Author Name</a></address>
-            published <time pubdate datetime="2000-01-01">Publish Time</time>
-          </div>
-        </header>
-        <section class="article-body"></section>
-        <a href="#" class="read-on">Read on &rarr;</a>
-      </article>
-    </section>
-    <section id="about" class="tab-content">
-      <header>
-        Welcome to my Blog
-      </header>
-      <section>
-        <h1>Some of my intrests:</h1>
+    <section id="header-section">
+      <!-- temproray Logo -->
+      <img class="logo-icon" src="img/temp-logo.png" alt="logo-img">
+      <!-- <h2 class="logo-sub">Be Boundles!</h2> -->
+      <nav class="main-nav">
+        <a class="icon-menu"></a>
         <ul>
-          <li>Coding</li>
-          <li>Sharing what I've learned</li>
-          <li>Hanging with my family</li>
+          <li class="tab"><a href="#">Home</a></li>
+          <li class="tab"><a href="#">Tech Skills</a></li>
+          <li class="tab"><a href="#">Projects</a></li>
+          <li class="tab"><a href="#">About Me</a></li>
         </ul>
-      </section>
+      </nav>
+      <nav class="social-media-nav">
+        <!-- hamburger menu -->
+        <ul>
+          <!-- target="_blank"  is used to tell the browser to open a new window -->
+          <li><a href="https://github.com/luayghazwan" target="_blank" class="icon-github"></a></li>
+          <li><a href="https://www.linkedin.com/in/luayyounus" class="icon-linkedin"></a></li>
+          <li><a href="https://twitter.com/luayyounus" class="icon-twitter"></a></li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <main>
+    <section id="main-section" class="opening-line">
+      <h2>Hi! My name is Luay, a Front-End Developer</h2>
+      <h3>In this interactive page, you will find the projects I worked on and my Technology Background</h3>
     </section>
   </main>
   <footer>
-    &copy; 2017 | Be Boundless!
+    &copy; 2017 | Creative Design
   </footer>
 </body>
 </html>

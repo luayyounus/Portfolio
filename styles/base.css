@@ -1,39 +1,34 @@
-/* TODO: Add a rule for images, so they never exceed their container's width. */
-.icon-home, .icon-twitter3, .icon-address-book, .icon-github {
+.icon-github, .icon-linkedin, .icon-twitter, .icon-menu {
   max-width: 100%;
+  background-color: transparent;
 }
 
 body {
   line-height: 1.5;
   font-size: 100%;
-  color: #313131;
-}
-#main-section {
-  min-height: 62vh;
-  background-color: grey;
-}
-
-hr {
-  margin: 1em;
-  width: 80%;
+  color: white;
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
 
-/*TEXT STYLES
-=======================================*/
 p {
   font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+li, ul{
+  margin: 0;
+  padding: 0;
 }
 
 address {
   display: inline-block;
 }
 
-/*LINK STYLES
-=======================================*/
-
 a, a:link, a:active {
   text-decoration: none;
-  color: #777;
+  color: white;
 }
 
 a:hover, a:focus {
@@ -41,4 +36,5 @@ a:hover, a:focus {
 }
 
 a:visited {
+
 }
