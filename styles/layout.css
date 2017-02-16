@@ -24,6 +24,18 @@
     .icon-menu {
       display: none;
     }
+    #bio {
+      background-color: #251140;
+    }
+    #my-journey {
+      background-color: #380606;
+    }
+    #articles {
+      background-color: #4A0C42;
+    }
+    #contact-me {
+      background-color: #004213;
+    }
   }
 
   @media only screen and (max-width: 414px) {
