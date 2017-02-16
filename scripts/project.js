@@ -48,6 +48,12 @@ instances.forEach(function(a) {
 
 
 
+//jQuery to show the clicked tab
+$('.main-nav').on('click','.tab',function(){
+  $('section').hide();
+  $('#' + $(this).data('content')).fadeIn();
+})
+
 
 
 
