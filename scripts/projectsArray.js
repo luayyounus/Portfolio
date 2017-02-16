@@ -1,6 +1,6 @@
-var projectsArray = [
+var rawData = [
   {
-    image: '../img/proj/Salmon_Cookies.png',
+    image: '../img/proj/Nice_Breakers.png',
     title: 'Nice Breakers',
     subtitle: 'A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.',
     githubUrl: 'https://github.com/brlittle86/nicebreakers.git',
@@ -28,7 +28,7 @@ var projectsArray = [
   },
   {
     image: '../img/proj/Chocolate_Pizza.png',
-    title: 'Chocolate_Pizza',
+    title: 'Chocolate Pizza',
     subtitle:'A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.',
     githubUrl: 'https://github.com/luayghazwan/chocolate-pizza.git',
     liveUrl: 'https://luayghazwan.github.io/chocolate-pizza/index.html',

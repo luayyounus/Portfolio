@@ -21,6 +21,10 @@
   line-height: 2;
 
 }
+
+button {
+  color: black;
+}
 .main-nav li, .social-media-nav li {
   list-style: none;
   display: inline-block;
@@ -46,6 +50,7 @@
 }
 .icon-menu {
   font-size: 250%;
+  float: right;
 }
 
 #opening-line {
@@ -63,35 +68,3 @@ footer {
 .template {
   display: none;
 }
-
- @media only screen and (min-width: 415px){
-    .icon-menu {
-      display: none;
-    }
-  }
-
-  @media only screen and (max-width: 414px) {
-    .logo-icon {
-      max-width: 18%;
-    }
-
-    .main-nav li {
-      display: none;
-      margin: none;
-      padding: none;
-      border-bottom: 1px solid #ccc;
-      font-size: 120%;
-      /*float: left;*/
-      /*list-style: none;*/
-    }
-
-    .social-media-nav ul {
-      display: none;
-    }
-    #opening-line {
-      font-size: 80%;
-    }
-    footer {
-      font-size: 80%;
-    }
-  }

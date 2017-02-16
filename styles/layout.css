@@ -12,7 +12,53 @@
   clear: both;
 }
 
-
-@media only screen and (orientation: landscape){
-
+.project-image {
+  max-width: 20%;
 }
+
+#bio img {
+  max-width: 10%;
+}
+
+ @media only screen and (min-width: 415px){
+    .icon-menu {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 414px) {
+    .logo-icon {
+      display: none;
+    }
+    nav.main-nav:hover ul li {
+      display: block;
+      font-size: 130%;
+    }
+
+    nav.main-nav {
+      width: 100%;
+      float: right;
+      overflow: auto;
+
+        }
+    .main-nav ul li {
+      display: none;
+      margin: none;
+      padding: none;
+      border-bottom: 1px solid #ccc;
+      font-size: 80%;
+      /*float: left;*/
+      /*list-style: none;*/
+    }
+
+
+    .social-media-nav ul {
+      display: none;
+    }
+    #opening-line {
+      font-size: 80%;
+    }
+    footer {
+      font-size: 80%;
+    }
+  }
