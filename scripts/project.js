@@ -14,21 +14,9 @@ function Project (content) {
 
 // bring the template and clone
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
-  $newProject.find('img').attr('src',this.image);
-  $newProject.find('header h1').text(this.title);
-  $newProject.find('.subtitle').text(this.subtitle);
-
-  $newProject.find('.icon-github').attr('href',this.githubUrl);
-
-  $newProject.find('.live-url').text('Click to view the main page!');
-  $newProject.find('.live-url').attr('href',this.liveUrl);
-
-  $newProject.find('time[startDate]').text(this.dateCreated);
-  $newProject.find('time[endDate]').text(this.dateFinished);
-
-  return $newProject;
+  var template = Handlebars.compile($('#articles-handlebars').html());
+  console.log(template);
+  return template(this);
 }
 
 // Sort by Date
@@ -43,15 +31,17 @@ rawData.forEach(function(a) {
 
 //append to Html
 instances.forEach(function(a) {
-  $('#articles').append(a.toHtml());
+  $('#projects').append(a.toHtml());
 });
-
-
 
 //jQuery to show the clicked tab
 $('.main-nav').on('click','.tab',function(){
-  $('section').hide();
-  $('#' + $(this).data('content')).fadeIn();
+  $('main section').hide();
+  if ($(this).data('content') === 'home') {
+    $('main section').show();
+  } else {
+    $('#' + $(this).data('content')).fadeIn();
+  }
 })
 
 

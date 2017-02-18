@@ -11,6 +11,20 @@
   <!-- favicon -->
   <link rel="icon" type="image/icon" href="https://">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script id="articles-handlebars" type="text/x-handlebars-template">
+    <article>
+      <header>
+        <h1>{{title}}</h1>
+      </header>
+      <a href="{{live-url}}"><img class="project-image" src="{{image}}"></a>
+      <section class="subtitle">{{subtitle}}</section>
+      <a class="icon-github" href="" target="">{{githubUrl}}</a>
+      <div class="prject-date">
+        Date of creation <time startDate datetime="01-01-2017">{{dateCreated}}</time>
+        Date of completion <time endDate datetime="01-01-2017">{{dateFinished}}</time>
+      </div>
+    </article>
+  </script>
 </head>
 
 <body>
@@ -22,11 +36,11 @@
       <nav class="main-nav">
         <a class="icon-menu"></a>
         <ul>
-          <li class="tab" data-content="home"><a href="#">Home</a></li>
-          <li class="tab" data-content="bio"><a href="index.html#bio">About Me</a></li>
-          <li class="tab" data-content="my-journey"><a href="index.html#my-journey">Tech Skills</a></li>
-          <li class="tab" data-content="articles"><a href="index.html#articles">Projects</a></li>
-          <li class="tab" data-content="contact"><a href="index.html#contact-me">Contact Me</a></li>
+          <li class="tab" data-content="home">Home</a></li>
+          <li class="tab" data-content="bio">About Me</a></li>
+          <li class="tab" data-content="my-journey">Tech Skills</a></li>
+          <li class="tab" data-content="projects">Projects</li>
+          <li class="tab" data-content="contact">Contact Me</a></li>
         </ul>
       </nav>
       <nav class="social-media-nav">
@@ -58,32 +72,19 @@
       </ul>
     </section>
 
-    <section id="articles">
-      <article class="template" data-category="project">
-        <header>
-          <h1>Title</h1>
-        </header>
-        <img class="project-image" src="">
-        <section class="subtitle"></section>
-        <button class="live-url" type="click" name="button" href=""></button>
-        <a class="icon-github" href="" target=""></a>
-        <div class="prject-date">
-          Date of creation <time startDate datetime="01-01-2017">Start Date</time>
-          Date of completion <time endDate datetime="01-01-2017">End Date</time>
-        </div>
-      </article>
+    <section id="projects">
+
     </section>
 
     <section id="contact">
       <h2>Some of my qulaities as a successful Developer: Team Player, Patient, Blah Blah Blah  </h2>
     </section>
   </main>
-
   <footer>
     &copy; 2017 | Creative Design
   </footer>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
   <script src="/scripts/projectsArray.js" type="text/javascript"></script>
   <script src="/scripts/project.js" type="text/javascript"></script>
 </body>
