@@ -20,17 +20,18 @@ Project.prototype.toHtml = function() {
 }
 
 
-Project.loadProjects = function(rawData){
+Project.loadAll = function(rawData){
   // Sort by Date
   instances.sort(function(a,b) {
     return (new Date(b.dateCreated)) - (new Date(a.dateCreated));
   });
 
   //creating the instances of my projects using forEach
-  rawData.forEach(function(a) {
-    instances.push(new Project(a));
-  });
+  rawData.forEach(function(data) {
+    instances.push(new Project(data));
+  })
 }
+
 // Show/Hide hamburger list when clicked
 //
 // $('.icon-menu').on('click',function(){

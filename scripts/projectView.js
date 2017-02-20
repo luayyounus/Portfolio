@@ -1,27 +1,6 @@
+'use strict';
+
 //jQuery to show the clicked tab
-
-
-$.getJSON('/data/prjectData.json')
-  .then(function(rawData){
-    if(localStorage.rawData){
-      Project.loadProjects(JSON.parse(localStorage.rawData));
-      renderInstance();
-    } else {
-      function(rawData){
-        localStorage.setItem('rawData',JSON.stringify(rawData));
-        Project.loadProjects(rawData);
-        renderInstance();
-      }
-    }
-  }
-
-
-//append to Html
-function renderInstance(){
-  instances.forEach(function(a) {
-    $('#projects').append(a.toHtml());
-  });
-}
 
 $('.main-nav').on('click','.tab',function(){
   $('main section').hide();
@@ -31,3 +10,26 @@ $('.main-nav').on('click','.tab',function(){
     $('#' + $(this).data('content')).fadeIn();
   }
 });
+
+Project.fetchAll = function(){
+  if(localStorage.rawData){
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    renderInstance(rawData);
+  } else {
+    $.getJSON('/data/prjectData.json')
+    .then(function(data){
+      localStorage.setItem('rawData', JSON.stringify(data));
+      Project.loadAll(data);
+      renderInstance(rawData);
+    }, function(error){
+      console.log('error',error);
+    }
+  )
+}
+
+//append to Html
+function renderInstance(rawData){
+  instances.forEach(function(a) {
+    $('#projects').append(a.toHtml());
+  })
+}
