@@ -19,33 +19,18 @@ Project.prototype.toHtml = function() {
   return template(this);
 }
 
-// Sort by Date
-instances.sort(function(a,b) {
-  return (new Date(b.dateCreated)) - (new Date(a.dateCreated));
-});
 
-//creating the instances of my projects using forEach
-rawData.forEach(function(a) {
-  instances.push(new Project(a));
-});
+Project.loadAll = function(rawData){
+  // Sort by Date
+  instances.sort(function(a,b) {
+    return (new Date(b.dateCreated)) - (new Date(a.dateCreated));
+  });
 
-//append to Html
-instances.forEach(function(a) {
-  $('#projects').append(a.toHtml());
-});
-
-//jQuery to show the clicked tab
-$('.main-nav').on('click','.tab',function(){
-  $('main section').hide();
-  if ($(this).data('content') === 'home') {
-    $('main section').show();
-  } else {
-    $('#' + $(this).data('content')).fadeIn();
-  }
-})
-
-
-
+  //creating the instances of my projects using forEach
+  rawData.forEach(function(data) {
+    instances.push(new Project(data));
+  })
+}
 
 // Show/Hide hamburger list when clicked
 //
