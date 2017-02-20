@@ -19,22 +19,18 @@ Project.prototype.toHtml = function() {
   return template(this);
 }
 
-// Sort by Date
-instances.sort(function(a,b) {
-  return (new Date(b.dateCreated)) - (new Date(a.dateCreated));
-});
 
-//creating the instances of my projects using forEach
-rawData.forEach(function(a) {
-  instances.push(new Project(a));
-});
+Project.loadProjects = function(rawData){
+  // Sort by Date
+  instances.sort(function(a,b) {
+    return (new Date(b.dateCreated)) - (new Date(a.dateCreated));
+  });
 
-//append to Html
-instances.forEach(function(a) {
-  $('#projects').append(a.toHtml());
-});
-
-
+  //creating the instances of my projects using forEach
+  rawData.forEach(function(a) {
+    instances.push(new Project(a));
+  });
+}
 // Show/Hide hamburger list when clicked
 //
 // $('.icon-menu').on('click',function(){
