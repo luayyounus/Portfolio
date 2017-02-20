@@ -19,7 +19,7 @@ Project.prototype.toHtml = function() {
   return template(this);
 }
 
-
+// a function method to fire when the data is being retrieved from .json DataBase
 Project.loadAll = function(rawData){
   // Sort by Date
   instances.sort(function(a,b) {
