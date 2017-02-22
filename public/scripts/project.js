@@ -43,7 +43,7 @@
         } else {
           $.getJSON('/data/projectData.json')
           .then(rawData => {rawData.map(data => {
-            let instancesArray = new Project(data);
+            instancesArray.push(new Project(data)).reduce(function(acc,val){return acc + val;},0);
             viewProjects.renderInstance(instancesArray);
             callback();
           })
