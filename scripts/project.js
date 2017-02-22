@@ -14,7 +14,7 @@ function Project (content) {
 
 // bring the template and clone
 Project.prototype.toHtml = function() {
-  var template = Handlebars.compile($('#articles-handlebars').html());
+  let template = Handlebars.compile($('#articles-handlebars').html());
   console.log(template);
   return template(this);
 }

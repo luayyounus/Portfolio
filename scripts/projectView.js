@@ -1,6 +1,6 @@
 'use strict';
 
-//jQuery to show the clicked tab in a single page
+//jQuery to show the clicked tab in a single page, by hiding and showing parts of the rendered function
 $('.main-nav').on('click','.tab',function(){
   $('main section').hide();
   if ($(this).data('content') === 'home') {
