@@ -11,16 +11,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static('./public'));
 
 // Routes
-app.get('/admin', function(request, response) {
-  response.sendFile('public/admin.html', {root: '.'});
-});
-
-app.get('/index', function(request, response) {
+app.get('/', function(request, response) {
   response.sendFile('public/index.html', {root: '.'});
 });
 
 app.get('*', function(request, response) {
-  console.log('page not found');
   response.send('Page not found');
 });
 
