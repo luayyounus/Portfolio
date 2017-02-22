@@ -16,8 +16,8 @@
   };
 
   //append our instances to HTML / render all the elements on the page
-  viewProjects.renderInstance = function (){
-    instances.map(function(a) {
+  viewProjects.renderInstance = dataToRender => {
+    dataToRender.map(a => {
       $('#projects').append(a.toHtml());
     })
   }

@@ -27,39 +27,52 @@
       return (new Date(b.dateCreated)) - (new Date(a.dateCreated));
     });
 
-    //creating the instances of my projects using forEach
+    //creating the instances of my projects using forEach on a new array named rawData
     rawData.forEach(function(data) {
       instances.push(new Project(data));
     })
   }
 
   // a constructor method that parse in local storage to be rendered to the dom or stringify our data from json to local storage to avoid page reload and server traffic
-  Project.fetchAll = function(){
-    if(localStorage.rawData){
-      Project.loadAll(JSON.parse(localStorage.rawData));
-      renderInstance(rawData);
-    } else {
-      $.getJSON('/data/prjectData.json')
-      .then(function(data){
-        localStorage.setItem('rawData', JSON.stringify(data));
-        Project.loadAll(data);
-        renderInstance(rawData);
-      }, function(error){
-        console.log('error',error);
-      }
-    )
+  Project.fetchAll = callback => {
+    $.get('/')
+      .then(results => {
+        if (results.length){
+          viewProjects.renderInstance(results);
+          callback();
+        } else {
+          $.getJSON('/data/projectData.json')
+          .then(rawData => {rawData.map(data => {
+            let instancesArray = new Project(data);
+            viewProjects.renderInstance(instancesArray);
+            callback();
+          })
+          })
+        }
+      })
   }
-
   module.Project = Project;
 })(window);
 
+// AJAX old PART with JSON
+// } else {
+//   $.getJSON('/data/prjectData.json')
+//   .then(function(data){
+//     localStorage.setItem('rawData', JSON.stringify(data));
+//     Project.loadAll(data);
+//     renderInstance(rawData);
+//   }, function(error){
+//     console.log('error',error);
+//   }
+
+
+// A Fancy Way to make the hamburger work with jQuery
 // Show/Hide hamburger list when clicked
 //
 // $('.icon-menu').on('click',function(){
 //   $('.main-nav').toggle();
 //
 // });
-
 // 'slow',function(){
 //   console.log('works@!!!');
 //   $('.icon-menu').setAttribute('.rotate-right');
