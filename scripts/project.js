@@ -32,6 +32,24 @@ Project.loadAll = function(rawData){
   })
 }
 
+Project.fetchAll = function(){
+  if(localStorage.rawData){
+    Project.loadAll(JSON.parse(localStorage.getItem('rawData')));
+    renderInstance(instances);
+  } else {
+    $.getJSON('../data/projectData.json')
+    .then(function(data){
+      localStorage.setItem('rawData', JSON.stringify(data));
+      Project.loadAll(data)
+    })
+    .then(function() {
+      renderInstance(instances);
+    })
+    .catch(err => console.log(err));
+  }
+};
+
+
 // Show/Hide hamburger list when clicked
 //
 // $('.icon-menu').on('click',function(){
