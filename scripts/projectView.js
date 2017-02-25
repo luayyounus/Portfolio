@@ -11,25 +11,12 @@ $('.main-nav').on('click','.tab',function(){
   }
 });
 
-Project.fetchAll = function(){
-  if(localStorage.rawData){
-    Project.loadAll(JSON.parse(localStorage.rawData));
-    renderInstance(rawData);
-  } else {
-    $.getJSON('/data/prjectData.json')
-    .then(function(data){
-      localStorage.setItem('rawData', JSON.stringify(data));
-      Project.loadAll(data);
-      renderInstance(rawData);
-    }, function(error){
-      console.log('error',error);
-    }
-  )
-}
 
 //append to Html
 function renderInstance(rawData){
-  instances.forEach(function(a) {
+  console.log(rawData, 'rawdata');
+  rawData.map(function(a) {
+    console.log(a, 'a');
     $('#projects').append(a.toHtml());
   })
 }
