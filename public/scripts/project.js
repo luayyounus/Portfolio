@@ -14,8 +14,8 @@ function Project (content) {
 
 // bring the template and clone
 Project.prototype.toHtml = function() {
-  var template = Handlebars.compile($('#articles-handlebars').html());
-  console.log(template);
+  var template = Handlebars.compile($('#project-handlebars').html());
+  console.log('temp',template);
   return template(this);
 }
 
@@ -36,11 +36,12 @@ Project.fetchAll = function(){
   if(localStorage.rawData){
     Project.loadAll(JSON.parse(localStorage.getItem('rawData')));
     renderInstance(instances);
+    console.log('from locaaaal');
   } else {
     $.getJSON('../data/projectData.json')
     .then(function(data){
       localStorage.setItem('rawData', JSON.stringify(data));
-      Project.loadAll(data)
+      Project.loadAll(data);
     })
     .then(function() {
       renderInstance(instances);

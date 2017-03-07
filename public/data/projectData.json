@@ -1,6 +1,6 @@
 [
   {
-  "image": "../img/proj/Nice_Breakers.png",
+  "image": "../styles/img/proj/Nice_Breakers.png",
   "title": "Nice Breakers",
   "subtitle": "A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.",
   "githubUrl": "https://github.com/brlittle86/nicebreakers.git",
@@ -9,7 +9,7 @@
   "dateFinished": "01/26/2017"
   },
   {
-  "image": "../img/proj/Salmon_Cookies.png",
+  "image": "../styles/img/proj/Salmon_Cookies.png",
   "title": "Salmon Cookies",
   "subtitle": "A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.",
   "githubUrl":"https://github.com/luayghazwan/cookie-stand.git",
@@ -18,7 +18,7 @@
   "dateFinished": "01/16/2017"
   },
   {
-  "image": "../img/proj/Bus_Mall.png",
+  "image": "../styles/img/proj/Bus_Mall.png",
   "title": "Bus Mall",
   "subtitle":"A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.",
   "githubUrl": "https://github.com/luayghazwan/bus-mall.git",
@@ -27,16 +27,7 @@
   "dateFinished":"02/22/2017"
   },
   {
-  "image": "../img/proj/Bus_Mall.png",
-  "title": "Bus Mall",
-  "subtitle":"A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.",
-  "githubUrl": "https://github.com/luayghazwan/bus-mall.git",
-  "liveUrl": "https://luayghazwan.github.io/bus-mall/index.html",
-  "dateCreated": "01/17/2017",
-  "dateFinished":"02/22/2017"
-  },
-  {
-  "image": "../img/proj/Chocolate_Pizza.png",
+  "image": "../styles/img/proj/Chocolate_Pizza.png",
   "title": "Chocolate Pizza",
   "subtitle":"A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.",
   "githubUrl": "https://github.com/luayghazwan/chocolate-pizza.git",
@@ -45,7 +36,7 @@
   "dateFinished": "01/17/2017"
   },
   {
-  "image": "../img/proj/Portfolio_Project.png",
+  "image": "../styles/img/proj/Portfolio_Project.png",
   "title": "Portfolio Project",
   "subtitle":"A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.",
   "githubUrl": "https://github.com/luayghazwan/Portfolio.git",

@@ -1,5 +1,17 @@
 # Portfolio
-This is my portfolio that includes all my favorite projects
+This is my portfolio that includes all my favorite projects!
+
+I used JS-HTML-CSS to build this site.
+
+My one single-page website is responsive and can fit any screen! It's based on the concept of Mobile first.
+
+I had a wireframe ready before starting this project so I don't get distracted and waste time.
+
+Libraries used in my project: jQuery and HandleBars.
+
+To view the website I used Node server and planning to deploy my project to Heroku once it's done.
+
+The concept and points I followed to have my mission accomplished included the following:-
 
 As a developer, I need my site to use valid and semantic markup, so that employers will love me.
 

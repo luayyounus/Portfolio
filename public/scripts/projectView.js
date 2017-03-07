@@ -10,12 +10,9 @@ $('.main-nav').on('click','.tab',function(){
   }
 });
 
-
 //append to Html
 function renderInstance(rawData){
-  console.log(rawData, 'rawdata');
-  rawData.map(function(a) {
-    console.log(a, 'a');
+  rawData.map(a => {
     $('#projects').append(a.toHtml());
   })
-}
+};
