@@ -16,7 +16,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('*', function(request, response) {
-  response.send('Page not found');
+  response.send('public/index.html');
 });
 
 // Logs a console message to say which port the server has begun using
