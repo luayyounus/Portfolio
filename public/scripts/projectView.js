@@ -1,25 +1,21 @@
 'use strict';
 
-(function(module){
-  let viewProjects = {};
-
-  //jQuery to show the clicked tab in a single page, by hiding and showing parts of the rendered function
-  viewProjects.tabClick = function(){
-    $('.main-nav').on('click','.tab',function(){
-      $('main section').hide();
-      if ($(this).data('content') === 'home') {
-        $('main section').show();
-      } else {
-        $('#' + $(this).data('content')).fadeIn();
-      }
-    })
-  };
-
-  //append our instances to HTML / render all the elements on the page
-  viewProjects.renderInstance = dataToRender => {
-    dataToRender.map(a => {
-      $('#projects').append(a.toHtml());
-    })
+//jQuery to show the clicked tab
+$('.main-nav').on('click','.tab',function(){
+  $('main section').hide();
+  if ($(this).data('content') === 'home') {
+    $('main section').show();
+  } else {
+    $('#' + $(this).data('content')).fadeIn();
   }
-  module.viewProjects = viewProjects;
-})(window);
+});
+
+
+//append to Html
+function renderInstance(rawData){
+  console.log(rawData, 'rawdata');
+  rawData.map(function(a) {
+    console.log(a, 'a');
+    $('#projects').append(a.toHtml());
+  })
+}
