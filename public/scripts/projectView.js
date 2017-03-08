@@ -16,3 +16,15 @@ function renderInstance(rawData){
     $('#projects').append(a.toHtml());
   })
 };
+
+// Show/Hide hamburger list when clicked
+//
+// $('.icon-menu').on('click',function(){
+//   $('.main-nav').toggle();
+//
+// });
+
+// 'slow',function(){
+//   console.log('works@!!!');
+//   $('.icon-menu').setAttribute('.rotate-right');
+//   $('.li').show();
