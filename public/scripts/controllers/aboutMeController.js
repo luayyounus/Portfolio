@@ -4,7 +4,6 @@
   const aboutMe = {};
 
   aboutMe.init = () => {
-    Project.fetchAll();
     $('main > sections').hide();
     $('#about').show();
   }

@@ -4,7 +4,6 @@
   const projs = {};
 
   projs.init = () => {
-    Project.fetchAll();
     $('main > sections').hide();
     $('#projects').show();
   }
