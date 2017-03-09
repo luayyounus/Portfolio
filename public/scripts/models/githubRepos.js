@@ -7,7 +7,7 @@
     $.ajax({
       url:'https://api.github.com/user/repos',
       method:'GET',
-      headers: {Authorization: `Token ${gitHubToken}`}
+      headers: {Authorization: `Token ${process.env.GITHUBTOKEN}`}
     })
     //getting repos from Github and pushing them to new array so we can access it somewhere else, .then is Asynchronus and can't be accessed from the outside without affectig the overall performance
     .then(data => {
