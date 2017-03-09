@@ -11,13 +11,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static('./public'));
 
 // Routes
-app.get('/', function(request, response) {
-  response.sendFile('public/index.html', {root: '.'});
-});
-
-app.get('*', function(request, response) {
-  response.send('public/index.html');
-});
+app.get('*', (request, response) => response.sendFile('index.html', {root: './Public'}));
+app.get('/', (request, response) => response.sendFile('index.html', {root: './Public'}));
+app.get('/tech', (request, response) => response.sendFile('index.html', {root: './Public'}));
+app.get('/projects', (request, response) => response.sendFile('index.html', {root: './Public'}));
+app.get('/about', (request, response) => response.sendFile('index.html', {root: './Public'}));
 
 // Logs a console message to say which port the server has begun using
 app.listen(PORT, function() {
