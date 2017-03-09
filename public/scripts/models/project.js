@@ -35,13 +35,27 @@
 
   Project.fetchAll = function(){
     if(localStorage.rawData){
-      Project.loadAll(JSON.parse(localStorage.getItem('rawData')));
+      let dataFromJSON = JSON.parse(localStorage.getItem('rawData'));
+      console.log('Local Storage JSON', dataFromJSON);
+      Project.loadAll(dataFromJSON);
       renderInstance(instances);
-      console.log('from locaaaal');
     } else {
       $.getJSON('../data/projectData.json')
+      //calling the github repos in githubRepos.js with Ajax
+      .then(repos.githubData())
       .then(function(data){
+        repos.array.forEach(githubRepo => {
+          // console.log('github names',githubRepo.created_at);
+          data.forEach(proj => {
+            if(proj.name === githubRepo.name){
+              proj.dateCreated = githubRepo.created_at;
+              proj.dateCreated = proj.dateCreated.slice(0,10);
+            }
+          })
+        })
+
         localStorage.setItem('rawData', JSON.stringify(data));
+        // console.log('data with dateCreated',data);
         Project.loadAll(data);
       })
       .then(function() {

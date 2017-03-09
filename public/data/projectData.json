@@ -1,5 +1,6 @@
 [
   {
+  "name": "nicebreakers",
   "image": "../styles/img/proj/Nice_Breakers.png",
   "title": "Nice Breakers",
   "subtitle": "A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.",
@@ -9,6 +10,7 @@
   "dateFinished": "01/26/2017"
   },
   {
+  "name": "cookie-stand",
   "image": "../styles/img/proj/Salmon_Cookies.png",
   "title": "Salmon Cookies",
   "subtitle": "A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.",
@@ -18,6 +20,7 @@
   "dateFinished": "01/16/2017"
   },
   {
+  "name": "bus-mall",
   "image": "../styles/img/proj/Bus_Mall.png",
   "title": "Bus Mall",
   "subtitle":"A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.",
@@ -27,6 +30,7 @@
   "dateFinished":"02/22/2017"
   },
   {
+  "name": "chocolate-pizza",
   "image": "../styles/img/proj/Chocolate_Pizza.png",
   "title": "Chocolate Pizza",
   "subtitle":"A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.",
@@ -36,6 +40,7 @@
   "dateFinished": "01/17/2017"
   },
   {
+  "name": "Portfolio",
   "image": "../styles/img/proj/Portfolio_Project.png",
   "title": "Portfolio Project",
   "subtitle":"A project that sfpe yeao ekfl aiepga oalkow foijf qojaf ojiwfo kfmqprg mqgkas  qeogj prjprq qep.",
