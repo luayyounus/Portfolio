@@ -4,7 +4,6 @@
   const tech = {};
 
   tech.init = () => {
-    Project.fetchAll();
     $('main > sections').hide();
     $('#tech').show();
   }
