@@ -6,7 +6,7 @@
   tech.init = () => {
     Project.fetchAll();
     $('main > sections').hide();
-    $('#tech-skills').show();
+    $('#tech').show();
   }
   module.tech = tech;
-})
+})(window)

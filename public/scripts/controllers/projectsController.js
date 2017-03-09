@@ -9,4 +9,4 @@
     $('#projects').show();
   }
   module.projs = projs;
-})
+})(window)

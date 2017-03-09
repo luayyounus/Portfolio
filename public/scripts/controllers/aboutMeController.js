@@ -6,7 +6,7 @@
   aboutMe.init = () => {
     Project.fetchAll();
     $('main > sections').hide();
-    $('#projects').show();
+    $('#about').show();
   }
   module.aboutMe = aboutMe;
-})
+})(window)
