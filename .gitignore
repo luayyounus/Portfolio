@@ -64,5 +64,5 @@ Session.vim
 # auto-generated tag files
 tags
 
-# Github Token
-/Users/luayghazwan/codefellows/301/Portfolio/public/scripts/token.js
+# Personal Access Tokens
+public/scripts/githubToken.js
