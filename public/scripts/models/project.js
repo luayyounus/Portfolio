@@ -16,7 +16,6 @@
   // bring the template and clone
   Project.prototype.toHtml = function() {
     var template = Handlebars.compile($('#project-handlebars').html());
-    console.log('temp',template);
     return template(this);
   }
 
@@ -35,12 +34,22 @@
 
   Project.fetchAll = function(){
     if(localStorage.rawData){
-      Project.loadAll(JSON.parse(localStorage.getItem('rawData')));
+      let dataFromJSON = JSON.parse(localStorage.getItem('rawData'));
+      Project.loadAll(dataFromJSON);
       renderInstance(instances);
-      console.log('from locaaaal');
     } else {
       $.getJSON('../data/projectData.json')
+      //calling the github repos in githubRepos.js with Ajax
+      .then(repos.githubData())
       .then(function(data){
+        repos.array.forEach(githubRepo => {
+          data.forEach(proj => {
+            if(proj.name === githubRepo.name){
+              proj.dateCreated = githubRepo.created_at;
+              proj.dateCreated = proj.dateCreated.slice(0,10);
+            }
+          })
+        })
         localStorage.setItem('rawData', JSON.stringify(data));
         Project.loadAll(data);
       })
